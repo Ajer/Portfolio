@@ -14,7 +14,7 @@
   .w3-row-padding img {
     margin-bottom: 12px
    }
-  .bgimg {
+  .leftImg {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,14 +24,14 @@
 </style>
 <body>
 
-<!-- Sidebar with image -->
+<!-- left sidebar that holds big image -->
 <nav class="sidebar hide-medium hide-small" style="width:40%">
-  <div class="bgimg"></div>
+  <div class="leftImg"></div>
 </nav>
 
 <!-- Hidden Sidebar (reveals when clicked on menu icon)-->
-<nav class="sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+<nav class="sidebar black_col w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button black_col w3-xxxlarge w3-display-topright" style="padding:0 12px;">
     <i class="fa fa-remove"></i>
   </a>
   <div class="w3-bar-block w3-center">
@@ -47,11 +47,11 @@
 <div class="w3-main w3-padding-large" style="margin-left:40%">
 
   <!-- Menu icon to open sidebar -->
-  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openHiddenNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
   <header class="w3-container w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-jumbo"><b>Anders Johnsson</b></h1>
+    <h1 class="w3-xxlarge"><b>Anders Johnsson</b></h1>
     <p>.Net-developer with React FrontEnd skills</p>
     <img src="./images/a3_sepia.png" class="w3-image w3-hide-large hide-small w3-round" style="display:block;width:60%;margin:auto;">
     <img src="./images/a3_sepia.png" class="w3-image w3-hide-large hide-medium w3-round" width="1000" height="1333">
@@ -88,11 +88,12 @@
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
     <h2>About</h2>
     <hr class="w3-opacity">
-    <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
-      elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <p>Living in northern Skane for a big part of my adult life, my interests work-wise stand somewhere in between
+        react-development and .Net-development and at the moment my skills in both are being polished
+        by Lexicons really nice web-design-course combining training in both skills.
     </p>
-    <h3 class="w3-padding-16">My Skills</h3>
+
+    <h3 class="w3-padding-16" id="skills">My Skills</h3>
     <p class="w3-wide">Photography</p>
     <div class="w3-light-grey">
       <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
@@ -165,7 +166,7 @@
 
       <div class="w3-half">
         <ul class="w3-ul w3-center w3-card w3-hover-shadow">
-          <li class="w3-black w3-xlarge w3-padding-32">Pro</li>
+          <li class="black_col w3-xlarge w3-padding-32">Pro</li>
           <li class="w3-padding-16">Web Design</li>
           <li class="w3-padding-16">Photography</li>
           <li class="w3-padding-16">50GB Storage</li>
@@ -231,7 +232,7 @@
 
 <script>
 // Open and close sidebar
-function openNav() {
+function openHiddenNav() {
   document.getElementById("mySidebar").style.width = "60%";
   document.getElementById("mySidebar").style.display = "block";
 }
