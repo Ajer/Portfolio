@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="./styles.css">
@@ -50,7 +51,7 @@
   <span class="my_button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openHiddenNav()"><i class="fa fa-bars"></i></span>
 
   <!-- Header -->
-  <header class="w3-container w3-center" style="padding:128px 16px" id="home">
+  <header class="w3-container w3-center" style="padding:128px 16px 60px 16px" id="home">
     <h1 class="w3-xxlarge" style="color:darkgrey"><b>Anders Johnsson</b></h1>
     <p>.Net-developer with React FrontEnd skills</p>
     <!-- medium photo for screen widths between 600 - 1000 px -->
@@ -64,52 +65,101 @@
   <!-- Portfolio Section -->
   <div class="w3-padding-32 w3-content" id="portfolio">
     <h2 class="w3-text-grey">My Portfolio</h2>
-    <hr class="w3-opacity">
+    <hr class="w3-opacity" style="color:#eee">
+
+    <div class="container-fluid mycards" style="margin-top:30px">  <!--removed default-padding 15px-->
+      <div class="row" style="margin-bottom:30px">
+         <div class="col-sm-4" style="margin-bottom:5px;margin-top:5px">    <!-- class="col-md-4" -->
+           <div class="card" style="height:100%">   <!--style="width: 15rem;" -->
+             <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Html / CSS</h5>
+                <p class="card-text">Project with html/css only which showcases a Bakery site 'Munamii Cakery' online.</p>
+                <!-- <h5 class="card-text">12 $</h5>             
+                <a href="#" class="mt-auto btn btn-primary" style="max-width:150px">Add to cart</a> -->
+              <!-- </div>             -->
+               <a href="https://ajer.github.io/Mini_Bakery/" class="stretched-link"></a>  <!-- stretched-links in bootstrap make cards clickable -->
+            </div>
+           </div>
+         </div>
+         <div class="col-sm-4" style="margin-bottom:5px;margin-top:5px">    <!-- class="col-md-4" -->
+            <div class="card" style="height:100%">   <!--style="width: 15rem;" -->
+              <div class="card-body d-flex flex-column">
+                 <h5 class="card-title">React</h5>
+                 <p class="card-text">React Todo/itinerary app to be used on vacations and the like.
+                 </p>
+                 <!-- <h5 class="card-text">12 $</h5>             
+                 <a href="#" class="mt-auto btn btn-primary" style="max-width:150px">Add to cart</a> -->
+               <!-- </div>               -->
+               <a href="" class="stretched-link"></a>
+             </div>
+            </div>
+          </div>
+          <div class="col-sm-4" style="margin-bottom:5px;margin-top:5px">    <!-- class="col-md-4" -->
+            <div class="card" style="height:100%">   <!--style="width: 15rem;" -->
+              <!-- <img src="./product_img/cupcakes/c-feature-1.jpg" class="card-img-top"  alt=""> -->
+              <div class="card-body d-flex flex-column">
+               <!-- <div style="height:600px"> -->
+                 <h5 class="card-title">React Game</h5>
+                 <!-- <h5 style="font-size:12px">Cupcake</h5> -->
+                 <p class="card-text">Simple but fun Tic-Tac-Toe game developed to learn the basics of react.</p>
+                 <!-- <h5 class="card-text">12 $</h5>             
+                 <a href="#" class="mt-auto btn btn-primary" style="max-width:150px">Add to cart</a> -->
+               <!-- </div>               -->
+               <a href="" class="stretched-link"></a>
+             </div>
+            </div>
+          </div>
+      </div>
+   </div>
 
     <!-- Grid for photos -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-half">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/rocks.jpg" style="width:100%">
-        <img src="/w3images/sailboat.jpg" style="width:100%">
+    <div class="w3-row-padding" >
+      <div class="w3-half" style="margin:10 -16px"> 
+        <img src="./images/images_react.png" style="width:100%">
+        <img src="./images/laptop1.webp" style="margin-top:5px;width:100%">
+        <!--<img src="./images/laptop2.jpg" style="width:100%">-->
       </div>
 
-      <div class="w3-half">
-        <img src="/w3images/underwater.jpg" style="width:100%">
-        <img src="/w3images/chef.jpg" style="width:100%">
-        <img src="/w3images/wedding.jpg" style="width:100%">
-        <img src="/w3images/p6.jpg" style="width:100%">
+      <div class="w3-half" style="margin:0 -16px">
+        <img src="./images/laptop2.jpg" style="width:100%">
+        <img src="./images/win1.png" style="width:100%;">
       </div>
-    <!-- End photo grid -->
     </div>
+
+    
   <!-- End Portfolio Section -->
   </div>
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
     <h2>About</h2>
-    <hr class="w3-opacity">
-    <p>Living in northern Skane for a big part of my adult life, my interests work-wise stand somewhere in between
+    <!-- <hr class="w3-opacity"> -->
+    <hr class="w3-opacity" style="color:#eee">
+    <p>Living in northern Skane for a big part of my life, my interests work-wise stand somewhere in between
         react-development and .Net-development and at the moment my skills in both are being polished
         by Lexicons really nice web-design-course combining training in both skills.
     </p>
 
     <h3 class="w3-padding-16" id="skills">My Skills</h3>
-    <p class="w3-wide">Photography</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:95%">95%</div>
-    </div>
-    <p class="w3-wide">Web Design</p>
+    <p class="w3-wide" >Web Design</p>
     <div class="w3-light-grey">
       <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
     </div>
-    <p class="w3-wide">Photoshop</p>
+    <p class="w3-wide" style="margin-top:20px">React Development</p>
+    <div class="w3-light-grey" >
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:85%">85%</div>
+    </div>
+    <p class="w3-wide" style="margin-top:20px">.Net Development</p>
+    <div class="w3-light-grey" >
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%">90%</div>
+    </div><br>
+    <p class="w3-wide" style="margin-top:10px">Databases</p>
     <div class="w3-light-grey">
-      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:80%">80%</div>
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:90%">90%</div>
     </div><br>
 
-    <div class="w3-row w3-center w3-dark-grey w3-padding-16 w3-section">
-      <div class="w3-quarter w3-section">
+    <div class="w3-row w3-center w3-padding-16 w3-section" style="background-color:#eee;">
+      <!-- <div class="w3-quarter w3-section">
         <span class="w3-xlarge">14+</span><br>
         Partners
       </div>
@@ -124,7 +174,7 @@
       <div class="w3-quarter w3-section">
         <span class="w3-xlarge">150+</span><br>
         Meetings
-      </div>
+      </div> -->
     </div>
 
     <button class="my_button w3-light-grey w3-padding-large w3-section">
@@ -133,7 +183,7 @@
 
     <!-- Testimonials -->
     <h3 class="w3-padding-24">My Reputation</h3>
-    <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <!-- <img src="/w3images/avatar_smoke.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-text-black w3-margin-right">Chandler Bing.</span> Web Designer.</p>
     <p>Jane Doe is just awesome. I am so happy to have met her!</p><br>
    
@@ -143,7 +193,7 @@
     
     <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
     <p><span class="w3-large w3-text-black w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than Jane Doe.</p><br>
+    <p>No one is better than Jane Doe.</p><br> -->
     
     <!-- Grid for pricing tables -->
     <h3 class="w3-padding-16">My Price</h3>
@@ -190,7 +240,8 @@
   <!-- Contact Section -->
   <div class="w3-padding-32 w3-content w3-text-grey" id="contact" style="margin-bottom:64px">
     <h2>Contact Me</h2>
-    <hr class="w3-opacity">
+    <!-- <hr class="w3-opacity"> -->
+    <hr class="w3-opacity" style="color:#eee">
 
     <div class="w3-section">
       <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
@@ -198,8 +249,6 @@
       <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
     </div>
     
-    <!-- Image of location/map -->
-    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
    
     <p>Lets get in touch. Send me a message:</p>
     <form action="/action_page.php" target="_blank">
@@ -213,7 +262,12 @@
         </button>
       </p>
     </form>
-  <!-- End Contact Section -->
+    <!-- End Contact Section -->
+ 
+    <!-- Image of location/map -->
+    <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin:32px 0">
+    
+
   </div>  
   
   <!-- Footer -->
@@ -228,8 +282,8 @@
   <!-- End footer -->
   </footer>
   
-<!-- END PAGE CONTENT -->
-</div>
+
+</div>  <!-- END PAGE CONTENT -->
 
 <script>
 // Open and close sidebar
