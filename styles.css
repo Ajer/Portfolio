@@ -31,6 +31,30 @@ body{
     font-weight:bold;
 }
 
+.left-half{
+    padding-left:50px !important;    
+    margin:10px 10px 10px -16px !important;
+}
+
+.right-half{
+    padding-left:50px !important;    
+    margin:0 -16px !important;
+}
+
+@media only screen and (min-width:600px) 
+{
+    .left-half{
+        padding-left:50px !important;    
+        margin:10px 10px 10px -16px !important;
+    }
+    
+    .right-half{
+        padding-left:20px !important;    
+        margin:0 -16px !important;
+    }
+}
+
+
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
 
 /* audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
