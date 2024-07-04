@@ -19,9 +19,9 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./images/a3_sepia.png');
+    background-image: url('./images/a3_sepia_kopia.png');
     min-height: 100%;
-    transition: 3s;
+    transition: 3s ease-in;
   }
 
   .leftImgCol{
@@ -30,9 +30,9 @@
     background-size: cover;
     background-image: url('./images/a3_1.png');
     min-height: 100%;
-    transition: 3s;
-    filter:grayscale(40%);
-    /* transform: scale(0.4); */
+    transition:3s ease-in;
+    filter: grayscale(40%);
+    /* transform: scale(0.8); */
   }
 </style>
 <body>
@@ -69,9 +69,14 @@
     <p>.Net-developer with React FrontEnd skills</p>
     <!-- medium photo for screen widths between 600 - 1000 px -->
      
-    <img src="./images/a3_sepia.png" class="w3-image w3-hide-large hide-small w3-round" style="display:block;width:60%;margin:auto;">
-
-    <img src="./images/a3_sepia.png" class="w3-image w3-hide-large hide-medium w3-round" width="1000" height="1333"> <!--small photo for screen less than 600px-->
+    
+      <img src="./images/a3_sepia.png" class="w3-image w3-hide-large hide-small w3-round" style="display:block;width:60%;margin:auto;">
+      <!-- <div class="clicker_998 w3-hide-large hide-small" onclick="toggleColor()">Click to toggle Color</div>  -->
+    
+    
+       <img src="./images/a3_sepia.png" class="w3-image w3-hide-large hide-medium w3-round" width="1000" height="1333"> <!--small photo for screen less than 600px-->
+       <!-- <div class="clicker_998 w3-hide-large hide-medium" onclick="toggleColor()">Click to toggle Color</div>  -->
+    
 
     <!-- <button class="my_button w3-light-grey w3-padding-large w3-margin-top">
       <i class="fa fa-download"></i> Download Resume
@@ -325,12 +330,12 @@ function closeNav() {
 function toggleColor() {
   var elem = document.querySelector("#myImgDiv");
  
-  if (elem.classList.contains('leftImgCol')) {
-    elem.classList.replace("leftImgCol", "leftImg");
-  }
-  else{
-    elem.classList.replace("leftImg", "leftImgCol");
-  }
+    if (elem.classList.contains('leftImgCol')) {
+       elem.classList.replace("leftImgCol", "leftImg");
+    }
+    else{
+       elem.classList.replace("leftImg", "leftImgCol");
+    }
 }
 
 </script>
